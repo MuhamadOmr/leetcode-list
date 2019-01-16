@@ -91,9 +91,10 @@ var maxDepth = function(root) {
 };
 
 // another recursive solution
-if (!root) return 0;
-var lval = maxDepth(root.left) + 1;
-var rval = maxDepth(root.right) + 1;
-return lval > rval ? lval : rval;
-
+var maxDepth = function(root) {
+  if (!root) return 0;
+  var lval = maxDepth(root.left) + 1;
+  var rval = maxDepth(root.right) + 1;
+  return lval > rval ? lval : rval;
+};
 // to get number of balanced binary tree levels : console.log(return Math.floor(Math.log(root) / Math.log(2)) + 1;);
